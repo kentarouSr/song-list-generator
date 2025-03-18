@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌リスト作成ツール</title>
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>歌リスト作成ツール</h2>
+    <table id="songTable">
+        <tr>
+            <th>アーティスト名</th>
+            <th>曲名</th>
+        </tr>
+        <!-- 初期入力欄（10行） -->
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <button onclick="addRow(1)">+1行追加</button>
+    <button onclick="addRow(10)">+10行追加</button>
+    <button onclick="exportToGoogleSheets()">スプレッドシートに出力</button>
+
+</body>
+</html>
