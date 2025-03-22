@@ -96,3 +96,11 @@ function exportToGoogleSheets() {
         alert("エラーが発生しました");
     });
 }
+
+// ✅ データ確認用のテスト関数（スマホ対応）
+function testData() {
+    let songList = getSongList();
+    let message = songList.map(item => `🎵 ${item[0]} - ${item[1]}`).join("\n"); // データを見やすく整形
+    alert("【取得したデータ】\n" + (message || "データなし"));
+}
+
