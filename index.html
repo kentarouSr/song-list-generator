@@ -26,19 +26,26 @@
             font-size: 16px;
             cursor: pointer;
         }
+        /* 入力フォームのスクロール用スタイル */
+        .scrollable-form {
+            max-height: 300px; /* 必要に応じて高さを調整 */
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
 
     <h2>歌リスト作成ツール</h2>
-    <table id="songTable">
-        <tr>
-            <th>アーティスト名</th>
-            <th>曲名</th>
-        </tr>
-        <tbody id="tableBody"></tbody>
-    </table>
-
+    <form id="songForm" class="scrollable-form">
+        <table id="songTable">
+            <tr>
+                <th>アーティスト名</th>
+                <th>曲名</th>
+            </tr>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </form>
+    
     <button onclick="addRow(1)">+1行追加</button>
     <button onclick="addRow(10)">+10行追加</button>
     <button onclick="exportToGoogleSheets()">スプレッドシートに出力</button>
